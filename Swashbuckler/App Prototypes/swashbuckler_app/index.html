@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0d2f28" />
+  <title>Swashbuckler 2027</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="eyebrow">2ND ANNUAL INVITATIONAL</div>
+        <h1>SWASHBUCKLER<br><span>BIG CEDAR 2027</span></h1>
+        <p>April 15–17 • Ridgedale, Missouri</p>
+        <div id="countdown" class="countdown"></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="screen active">
+        <div class="quick-grid">
+          <button class="quick-card" data-target="schedule">
+            <span class="quick-icon">☠</span>
+            <strong>Trip Schedule</strong>
+            <small>3 days, 3 rounds</small>
+          </button>
+          <button class="quick-card" data-target="courses">
+            <span class="quick-icon">⚑</span>
+            <strong>The Courses</strong>
+            <small>Payne’s, Ozarks, Mountain Top</small>
+          </button>
+          <button class="quick-card" data-target="money">
+            <span class="quick-icon">$</span>
+            <strong>Money</strong>
+            <small>Deposit + trip budget</small>
+          </button>
+          <button class="quick-card" data-target="competition">
+            <span class="quick-icon">🏆</span>
+            <strong>Competition</strong>
+            <small>Formats, points, leaderboard</small>
+          </button>
+        </div>
+
+        <div class="card announcement-card">
+          <div class="card-kicker">CAPTAIN'S NOTICE</div>
+          <h2>Secure your spot</h2>
+          <p>A <strong>$600 deposit per person</strong> is required to book lodging and golf.</p>
+          <label class="status-toggle">
+            <input type="checkbox" id="depositPaid">
+            <span></span>
+            Mark my deposit paid
+          </label>
+        </div>
+
+        <div class="card">
+          <div class="section-heading">
+            <div>
+              <div class="card-kicker">AT A GLANCE</div>
+              <h2>The voyage</h2>
+            </div>
+          </div>
+          <div class="fact-list">
+            <div><span>Arrival</span><strong>Thursday morning</strong></div>
+            <div><span>Departure</span><strong>Saturday</strong></div>
+            <div><span>Nights</span><strong>2</strong></div>
+            <div><span>Rounds</span><strong>3</strong></div>
+            <div><span>Estimated total</span><strong>$2,500</strong></div>
+          </div>
+        </div>
+
+        <div class="card checklist-card">
+          <div class="card-kicker">PRE-TRIP CHECKLIST</div>
+          <h2>Before you sail</h2>
+          <div id="checklist"></div>
+        </div>
+      </section>
+
+      <section id="schedule" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">ITINERARY</div>
+          <h2>Trip Schedule</h2>
+          <p>Times are placeholders until reservations and flights are finalized.</p>
+        </div>
+        <div class="timeline">
+          <article class="day-card">
+            <div class="day-badge">THU 4/15</div>
+            <h3>Arrival + Round 1</h3>
+            <div class="event"><time>Morning</time><div><strong>Fly into the Branson area</strong><span>Coordinate arrivals and rental vehicles</span></div></div>
+            <div class="event"><time>TBD</time><div><strong>Check in at Big Cedar Lodge</strong><span>Drop bags, grab lunch, head to the course</span></div></div>
+            <div class="event"><time>Afternoon</time><div><strong>Round 1</strong><span>Course assignment TBD</span></div></div>
+            <div class="event"><time>Evening</time><div><strong>Opening-night dinner</strong><span>Pairings reveal + rules briefing</span></div></div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-badge">FRI 4/16</div>
+            <h3>Doubleheader</h3>
+            <div class="event"><time>Morning</time><div><strong>Round 2</strong><span>Course assignment TBD</span></div></div>
+            <div class="event"><time>Midday</time><div><strong>Lunch + reset</strong><span>Leaderboard update</span></div></div>
+            <div class="event"><time>Afternoon</time><div><strong>Round 3</strong><span>Course assignment TBD</span></div></div>
+            <div class="event"><time>Evening</time><div><strong>Championship dinner</strong><span>Awards, payouts, bad-beat stories</span></div></div>
+          </article>
+
+          <article class="day-card">
+            <div class="day-badge">SAT 4/17</div>
+            <h3>Departure</h3>
+            <div class="event"><time>Morning</time><div><strong>Breakfast + checkout</strong><span>Final accounting and trophy photos</span></div></div>
+            <div class="event"><time>TBD</time><div><strong>Depart for airport</strong><span>Return rental vehicles and fly home</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="courses" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">THE TRACKS</div>
+          <h2>Three rounds. No hiding.</h2>
+          <p>Tap a course to reveal the trip notes.</p>
+        </div>
+
+        <article class="course-card paynes">
+          <div class="course-shade"></div>
+          <div class="course-copy">
+            <span>18 HOLES</span>
+            <h3>Payne’s Valley</h3>
+            <p>Tiger Woods design • Signature 19th hole</p>
+            <button class="reveal-btn">View trip notes</button>
+            <div class="course-notes">
+              <div><strong>Round:</strong> TBD</div>
+              <div><strong>Format:</strong> TBD</div>
+              <div><strong>Captain’s note:</strong> Save something for the dramatic finish.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card ozarks">
+          <div class="course-shade"></div>
+          <div class="course-copy">
+            <span>18 HOLES</span>
+            <h3>Ozarks National</h3>
+            <p>Coore & Crenshaw design • Big views, bigger consequences</p>
+            <button class="reveal-btn">View trip notes</button>
+            <div class="course-notes">
+              <div><strong>Round:</strong> TBD</div>
+              <div><strong>Format:</strong> TBD</div>
+              <div><strong>Captain’s note:</strong> Fairways first. Hero golf later.</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="course-card mountaintop">
+          <div class="course-shade"></div>
+          <div class="course-copy">
+            <span>13 HOLES • PAR 3</span>
+            <h3>Mountain Top</h3>
+            <p>Gary Player design • Short course, long memories</p>
+            <button class="reveal-btn">View trip notes</button>
+            <div class="course-notes">
+              <div><strong>Round:</strong> TBD</div>
+              <div><strong>Format:</strong> TBD</div>
+              <div><strong>Captain’s note:</strong> Closest-to-pin carnage belongs here.</div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="roster" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">THE CREW</div>
+          <h2>2027 Roster</h2>
+          <p>The Year 1 roster is loaded as a starting point. Handicaps and teams can be updated before launch.</p>
+        </div>
+        <div id="rosterGrid" class="roster-grid"></div>
+      </section>
+
+      <section id="competition" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">THE COMPETITION</div>
+          <h2>Formats + Leaderboard</h2>
+          <p>Year 1 used best ball and alternate shot with match-play points. This version keeps that structure editable for 2027.</p>
+        </div>
+
+        <div class="format-grid">
+          <div class="card format-card"><span>ROUND 1</span><h3>Best Ball</h3><p>1 point for a hole win, ½ for a tie, 0 for a loss.</p></div>
+          <div class="card format-card"><span>ROUND 2</span><h3>Alternate Shot</h3><p>1 point for a hole win, ½ for a tie, 0 for a loss.</p></div>
+          <div class="card format-card"><span>ROUND 3</span><h3>Best Ball</h3><p>1 point for a hole win, ½ for a tie, 0 for a loss.</p></div>
+        </div>
+
+        <div class="card">
+          <div class="section-heading">
+            <div>
+              <div class="card-kicker">LIVE BOARD</div>
+              <h2>Team standings</h2>
+            </div>
+            <button id="resetScores" class="ghost-btn">Reset</button>
+          </div>
+          <div id="leaderboard"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">SIDE ACTION</div>
+          <h2>Suggested Year 2 pots</h2>
+          <div class="fact-list">
+            <div><span>Team competition</span><strong>$40/person</strong></div>
+            <div><span>Individual net</span><strong>$20/person</strong></div>
+            <div><span>Closest to pin</span><strong>$20/person</strong></div>
+            <div><span>Total buy-in</span><strong>$80/person</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="money" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">THE DAMAGE</div>
+          <h2>Trip Budget</h2>
+          <p>Expected cost per person: <strong>$2,500</strong>.</p>
+        </div>
+
+        <div class="budget-total">
+          <span>Estimated total</span>
+          <strong>$2,500</strong>
+          <small>per person</small>
+        </div>
+
+        <div class="budget-bars">
+          <div class="budget-row"><div><span>Lodging</span><strong>$600</strong></div><div class="bar"><i style="width:24%"></i></div></div>
+          <div class="budget-row"><div><span>Golf</span><strong>$900</strong></div><div class="bar"><i style="width:36%"></i></div></div>
+          <div class="budget-row"><div><span>Flights</span><strong>$500</strong></div><div class="bar"><i style="width:20%"></i></div></div>
+          <div class="budget-row"><div><span>Food + drinks</span><strong>$500</strong></div><div class="bar"><i style="width:20%"></i></div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-kicker">PAYMENT MILESTONES</div>
+          <h2>What is due when</h2>
+          <div class="payment-list">
+            <label><input type="checkbox" data-save="deposit"><span><strong>$600 deposit</strong><small>Required to reserve lodging and golf</small></span></label>
+            <label><input type="checkbox" data-save="flight"><span><strong>Book flight</strong><small>Target budget: $500</small></span></label>
+            <label><input type="checkbox" data-save="balance"><span><strong>Remaining trip balance</strong><small>Due date to be announced</small></span></label>
+            <label><input type="checkbox" data-save="bets"><span><strong>Competition buy-in</strong><small>Suggested: $80 cash</small></span></label>
+          </div>
+        </div>
+      </section>
+
+      <section id="info" class="screen">
+        <div class="page-title">
+          <div class="card-kicker">FIELD GUIDE</div>
+          <h2>Trip Information</h2>
+        </div>
+
+        <div class="card">
+          <h3>Travel</h3>
+          <p>Fly in Thursday morning, April 15. Exact airport, flight window, rental cars, and departure timing are still TBD.</p>
+        </div>
+        <div class="card">
+          <h3>Lodging</h3>
+          <p>Big Cedar Lodge for two nights. Room assignments, confirmation numbers, check-in instructions, and property map can be added here.</p>
+        </div>
+        <div class="card">
+          <h3>What to pack</h3>
+          <p>Golf gear, rain layer, casual dinner clothes, comfortable shoes, cash for bets, chargers, and whatever swing thought you plan to abandon by hole six.</p>
+        </div>
+        <div class="card">
+          <h3>Emergency + organizer contacts</h3>
+          <p>Add trip captain phone numbers, resort contact details, airline confirmation links, and rental car information before publishing.</p>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button class="nav-btn active" data-target="home"><span>⌂</span>Home</button>
+      <button class="nav-btn" data-target="schedule"><span>☷</span>Schedule</button>
+      <button class="nav-btn" data-target="courses"><span>⚑</span>Courses</button>
+      <button class="nav-btn" data-target="roster"><span>♟</span>Roster</button>
+      <button class="nav-btn" data-target="info"><span>ⓘ</span>Info</button>
+    </nav>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

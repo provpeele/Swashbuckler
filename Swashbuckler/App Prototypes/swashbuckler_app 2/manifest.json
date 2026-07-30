@@ -1,0 +1,9 @@
+{
+  "name": "Swashbuckler 2027",
+  "short_name": "Swashbuckler",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f5f1",
+  "theme_color": "#0d2f28",
+  "icons": []
+}
